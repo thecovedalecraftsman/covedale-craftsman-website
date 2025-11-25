@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Covedale Craftsman | Handyman in Greater Cincinnati</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Calm, reliable, veteran-owned handyman services in Greater Cincinnati. Smart home installs, fixture and electrical upgrades, home safety checks, and minor repairs — with clear pricing and respectful service."
+  />
+
+  <!-- Favicon (tab icon) -->
+  <link rel="icon" type="image/png" href="logo-covedalecraftsman.png" />
+
+  <!-- Social Preview (Open Graph) -->
+  <meta property="og:title" content="The Covedale Craftsman | Handyman in Greater Cincinnati" />
+<meta property="og:description" content="Calm, reliable, veteran-owned handyman services in Greater Cincinnati. Smart home installs, fixture upgrades, safety checks, and practical home repairs — with clear pricing and respectful service." />
+
+<meta property="og:image"
+      content="https://thecovedalecraftsman.com/og-covedale-craftsman-v2.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+
+<meta property="og:url" content="https://thecovedalecraftsman.com/" />
+<meta property="og:type" content="website" />
+
+
+  <!-- Helpful keywords for search -->
+  <meta
+    name="keywords"
+    content="Covedale handyman, Cincinnati handyman, West Side Cincinnati handyman, smart home installation, light fixture installation, home repair, veteran-owned handyman"
+  />
+  <!-- LocalBusiness Schema for Google SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "The Covedale Craftsman",
+    "image": "https://thecovedalecraftsman.com/christopher.jpg",
+    "@id": "https://thecovedalecraftsman.com",
+    "url": "https://thecovedalecraftsman.com",
+    "telephone": "+15136568205",
+    "email": "christopher@thecovedalecraftsman.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "Covedale",
+      "addressRegion": "OH",
+      "postalCode": "",
+      "addressCountry": "US"
+    },
+    "description": "Veteran-owned handyman serving Covedale and Cincinnati’s West Side. Smart home installs, fixture upgrades, safety checks, and practical repairs with clear pricing and respectful service.",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Cincinnati"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "West Side Cincinnati"
+      },
+      {
+        "@type": "Neighborhood",
+        "name": "Covedale"
+      }
+    ],
+    "priceRange": "$"
+  }
+  </script>
+
+  <style>
+
+    :root {
+      /* Brand-aligned colors (can tweak later if you like) */
+      --bg: #f0f0ff;          /* light page background */
+      --bg-alt: #ffffff;      /* cards / panels */
+      --primary: #006090;     /* deep blue */
+      --primary-soft: #e0f3ff;/* soft blue tint */
+      --accent: #609030;      /* green accent */
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --max-width: 1100px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 18px 18px 60px;
+    }
+
+    /* HEADER + LOGO */
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0 14px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(
+        to bottom,
+        rgba(240, 240, 255, 0.97),
+        rgba(240, 240, 255, 0.8)
+      );
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .logo-img {
+      display: block;
+      height: 60px; /* adjust if needed */
+      width: auto;
+    }
+
+    /* VETERAN BADGE */
+
+    .veteran-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      color: var(--muted);
+      white-space: nowrap;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .veteran-badge svg {
+      width: 12px;
+      height: 12px;
+      color: var(--accent);
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .nav a {
+      padding: 6px 0;
+      position: relative;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.2s ease;
+    }
+
+    .nav a:hover::after { width: 100%; }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 32px;
+      align-items: center;
+      margin-top: 24px;
+      margin-bottom: 36px;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.4rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h1 span { color: var(--primary); }
+
+    .hero-sub {
+      color: var(--muted);
+      max-width: 34rem;
+      margin-bottom: 18px;
+    }
+
+    .hero-highlight {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-highlight strong { color: var(--text); }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.12s ease, box-shadow 0.12s ease,
+        background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 14px 30px rgba(0, 96, 144, 0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(0, 96, 144, 0.55);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border-color: rgba(156, 163, 175, 0.7);
+      color: var(--muted);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(148, 163, 184, 0.08);
+      border-color: rgba(107, 114, 128, 0.9);
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .hero-visual {
+      background: var(--bg-alt);
+      border-radius: 30px;
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-visual-inner {
+      border-radius: 22px;
+      background: radial-gradient(circle at top, var(--primary-soft), #f9fafb);
+      padding: 20px 18px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 0.85rem;
+    }
+
+    .visual-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .visual-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: linear-gradient(145deg, #1f2937, #4b5563);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e5e7eb;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .visual-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 0.75rem;
+    }
+
+    .visual-badges span {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(96, 144, 48, 0.08);
+      color: #365314;
+    }
+
+    .visual-tasks {
+      margin-top: 8px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 14px;
+      padding: 10px 10px 8px;
+      border: 1px solid rgba(209, 213, 219, 0.8);
+    }
+
+    .visual-tasks-title {
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .task-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px 0;
+    }
+
+    .task-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .task-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .pill {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(0, 96, 144, 0.08);
+      font-size: 0.7rem;
+      color: #014f86;
+    }
+
+    .visual-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .kpi {
+      text-align: right;
+    }
+
+    .kpi strong {
+      display: block;
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    /* SECTIONS */
+
+    section { margin-top: 36px; }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 { font-size: 1.4rem; }
+
+    .section-header p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 420px;
+    }
+
+    /* CARDS (used for services + bundles) */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      padding: 18px 16px 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-icon svg {
+      width: 18px;
+      height: 18px;
+      color: var(--primary);
+    }
+
+    .price-chip {
+      font-size: 0.78rem;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.04);
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    .card h3 { font-size: 1rem; }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .card ul {
+      list-style: none;
+      font-size: 0.85rem;
+      color: var(--muted);
+      padding-left: 0;
+    }
+
+    .card ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .card ul li::before {
+      content: "•";
+      color: var(--primary);
+      font-weight: 700;
+      margin-top: -1px;
+    }
+
+    .card-footnote {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* WHY US */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .why-item {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: var(--radius-lg);
+      padding: 14px 12px;
+      border: 1px solid rgba(209, 213, 219, 0.9);
+      font-size: 0.86rem;
+    }
+
+    .why-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .why-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: rgba(0, 96, 144, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .why-icon svg {
+      width: 14px;
+      height: 14px;
+      color: var(--primary);
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: var(--bg-alt);
+      border-radius: var(--radius-xl);
+      padding: 20px 18px;
+      border: 1px solid rgba(209, 213, 219, 0.95);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.06);
+      margin-top: 36px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 20px;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .about-photo {
+      justify-self: center;
+    }
+
+    .about-photo img {
+      display: block;
+      max-width: 220px;
+      width: 100%;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 3px solid rgba(0, 96, 144, 0.2);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.25);
+    }
+
+    /* PROMISE */
+
+    .promise {
+      background: var(--bg-alt);
+      border-radius: var(--radius-xl);
+      padding: 18px 16px;
+      border: 1px solid rgba(209, 213, 219, 0.95);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
+      font-size: 0.92rem;
+    }
+
+    .promise h3 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .promise-signature {
+      margin-top: 12px;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: #020617;
+      color: #e5e7eb;
+      border-radius: 26px;
+      padding: 22px 18px 20px;
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 24px;
+    }
+
+    .contact h2 {
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+
+    .contact p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      max-width: 380px;
+      margin-bottom: 12px;
+    }
+
+    .contact-meta {
+      font-size: 0.86rem;
+      color: #9ca3af;
+    }
+
+    .contact-meta span { display: block; }
+
+    .contact-form {
+      display: grid;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+
+    .field { display: grid; gap: 4px; }
+
+    .field label {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .field input,
+    .field textarea {
+      border-radius: 10px;
+      border: 1px solid #1f2937;
+      padding: 8px 9px;
+      background: #020617;
+      color: #e5e7eb;
+      font: inherit;
+      resize: vertical;
+      min-height: 40px;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: #6b7280;
+    }
+
+    .contact button {
+      margin-top: 4px;
+      background: #22c55e;
+      border: none;
+      color: #022c22;
+      font-weight: 600;
+      border-radius: 999px;
+      padding: 10px 16px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      justify-self: flex-start;
+    }
+
+    .contact button:hover { filter: brightness(1.05); }
+
+    footer {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 22px;
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .hero-visual { order: -1; }
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .contact { grid-template-columns: minmax(0, 1fr); }
+      .about-grid { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .nav { flex-wrap: wrap; }
+      .cards,
+      .why-grid { grid-template-columns: minmax(0, 1fr); }
+      .contact { padding: 18px 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER WITH YOUR LOGO + VETERAN BADGE -->
+    <header>
+      <div class="logo">
+        <img
+  	  src="logo-covedalecraftsman.png"
+	  width="58"
+	  height="58"
+	  alt="The Covedale Craftsman – Professional Precision, Personalized Results"
+	  class="logo-img"
+	/>
+
+        <span class="veteran-badge">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M7 4h10v6.5a5 5 0 0 1-2.2 4.1L12 17l-2.8-2.4A5 5 0 0 1 7 10.5V4Z"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 7.5 11 9l1.5-.5L11 8l-1-0.5Z"
+              stroke="currentColor"
+              stroke-width="1.3"
+              stroke-linejoin="round"
+            />
+          </svg>
+          VETERAN OWNED
+        </span>
+      </div>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#bundles">Bundles</a>
+        <a href="#why">Why Us</a>
+        <a href="#about-heading">About</a>
+        <a href="#promise">My Promise</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+        <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-text">
+        <h1 id="hero-heading">
+	  Need a project off your plate? I’m Christopher — your <span>local handyman</span>.
+	</h1>
+
+        <p class="hero-sub">
+          I help busy homeowners in Greater Cincinnati with the kinds of projects that never quite
+          make it off the to-do list: smart home installs, fixture and electrical upgrades, safety
+          checks, and practical home repairs.
+        </p>
+        <p class="hero-highlight">
+          <strong>Calm, reliable, and clear.</strong> I’ll explain the plan, quote the price
+          up front, and respect your time and your home.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:15136568205" class="btn-primary">
+            Call or Text Now — 513-656-8205
+          </a>
+          <a href="#contact" class="btn-secondary">
+            Get a Clear Quote Online
+          </a>
+        </div>
+        <p class="hero-note">
+          <strong>Minimum project value: $150.</strong> Serving Covedale, West Side Cincinnati, and nearby
+          neighborhoods.
+        </p>
+      </div>
+
+      <aside class="hero-visual" aria-label="Sample project overview">
+        <div class="hero-visual-inner">
+          <div class="visual-header">
+            <div class="visual-title">
+              <div class="avatar">CV</div>
+              <span>Today’s Home Visit</span>
+            </div>
+            <div class="visual-badges">
+              <span>On time</span>
+              <span>Booties on</span>
+            </div>
+          </div>
+          <div class="visual-tasks">
+            <div class="visual-tasks-title">Covedale, Cincinnati</div>
+            <div class="task-row">
+              <div class="task-label">
+                <span class="task-dot"></span>
+                Mount TV &amp; hide cables
+              </div>
+              <span class="pill">$220</span>
+            </div>
+            <div class="task-row">
+              <div class="task-label">
+                <span class="task-dot"></span>
+                Install video doorbell
+              </div>
+              <span class="pill">$150</span>
+            </div>
+            <div class="task-row">
+              <div class="task-label">
+                <span class="task-dot"></span>
+                Home safety check
+              </div>
+              <span class="pill">$150</span>
+            </div>
+          </div>
+          <div class="visual-footer">
+            <div>
+              <div>Project-based pricing</div>
+              <div>No surprises, no hourly clock</div>
+            </div>
+            <div class="kpi">
+              <strong>~3 hours</strong>
+              <span>Everything done, area cleaned</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" aria-labelledby="services-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="services-heading">Services for your everyday home needs</h2>
+        </div>
+        <p>
+          I focus on smaller, high-impact jobs that make your home safer, more comfortable,
+          and less stressful — without big renovations.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">
+            <!-- hammer icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 20 10.5 13.5M13 6 17 4l2 2-2 2-4-2M13 6 7 4 5 6l4 2"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <span class="price-chip">Home Improvement</span>
+          <h3>Home Improvements</h3>
+          <p>
+            Small upgrades that make your home feel better every day.
+          </p>
+          <ul>
+            <li>Smart home installs (cameras, doorbells, thermostats)</li>
+            <li>Light fixtures, dimmers, and fans</li>
+            <li>Shelving, curtain rods, and wall-mounted storage</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <!-- wrench icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M16 3.5A4.5 4.5 0 0 1 10.1 8l-5.3 5.3a2.5 2.5 0 1 0 3.5 3.5L13.6 12A4.5 4.5 0 0 1 21 8.2"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <span class="price-chip">Home Repairs</span>
+          <h3>Home Repairs</h3>
+          <p>
+            Fixing the little things before they drive you crazy.
+          </p>
+          <ul>
+            <li>Doors that stick, squeak, or don’t latch</li>
+            <li>Minor plumbing fixes and leaky fixtures</li>
+            <li>Loose hardware, wobbly rails, and more</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <!-- calendar/check icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M7 4v3M17 4v3M5 9h14M6 5h12a1 1 0 0 1 1 1v13H5V6a1 1 0 0 1 1-1Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="m9 14.5 1.5 1.5 3-3"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <span class="price-chip">Home Maintenance</span>
+          <h3>Home Maintenance</h3>
+          <p>
+            The small, important tasks that keep your home in good shape.
+          </p>
+          <ul>
+            <li>Smoke/CO detectors &amp; safety checks</li>
+            <li>Caulking, weather stripping, and touch-ups</li>
+            <li>Dryer vent cleaning and basic troubleshooting</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- BUNDLES -->
+    <section id="bundles" aria-labelledby="bundles-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="bundles-heading">Popular service bundles</h2>
+        </div>
+        <p>
+          Clear, package-based pricing for the types of projects I handle most often.
+          Each bundle can be customized to your home.
+        </p>
+      </div>
+
+      <div class="cards">
+        <!-- Smart Home Starter -->
+        <article class="card">
+          <div class="card-icon">
+            <!-- house/lock icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M5 11.5 12 4l7 7.5M7.5 10.5V19h9v-8.5"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10 18v-3.5a2 2 0 0 1 4 0V18"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <span class="price-chip">Smart Home Starter • $150–$250</span>
+          <h3>Smart Home Starter Package</h3>
+          <p>
+            Get your smart devices installed, configured, and working smoothly.
+          </p>
+          <ul>
+            <li>Install &amp; configure 1 smart device (camera, doorbell, thermostat, etc.)</li>
+            <li>Connect to Wi-Fi and apps, test everything together</li>
+            <li>Tidy cables and clean up the work area</li>
+          </ul>
+          <p class="card-footnote">
+            Everything working before I leave — that’s the goal.
+          </p>
+        </article>
+
+        <!-- Fixture & Electrical -->
+        <article class="card">
+          <div class="card-icon">
+            <!-- lightbulb icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 18h6M10 21h4M8 10a4 4 0 0 1 8 0c0 1.7-.8 2.3-1.6 3.2-.6.6-1.2 1.3-1.4 2.3h-2"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <span class="price-chip">Fixture &amp; Electrical • $150–$300</span>
+          <h3>Fixture &amp; Electrical Upgrade</h3>
+          <p>
+            Refresh the fixtures and electrical details you use every day.
+          </p>
+          <ul>
+            <li>Light fixtures, ceiling fans, switches, and outlets</li>
+            <li>Minor electrical troubleshooting and adjustments</li>
+            <li>Clean, safe, and precise installations</li>
+          </ul>
+          <p class="card-footnote">
+            Clear pricing per task, confirmed before work begins.
+          </p>
+        </article>
+
+        <!-- Safety Check -->
+        <article class="card">
+          <div class="card-icon">
+            <!-- shield/check icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 3 6 5.5v6c0 3.3 2.2 6.4 6 7.5 3.8-1.1 6-4.2 6-7.5v-6L12 3Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="m9.5 11.7 2 2.1 3-3.5"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <span class="price-chip">Home Safety Check • $150 flat</span>
+          <h3>Home Safety &amp; Security Check</h3>
+          <p>
+            A practical walkthrough to improve safety and peace of mind.
+          </p>
+          <ul>
+            <li>Smoke/CO detectors, door hardware, railings, and steps</li>
+            <li>Trip hazards, window locks, and exterior lighting</li>
+            <li>Minor fixes included when quick and simple</li>
+          </ul>
+          <p class="card-footnote">
+            Clear recommendations without scare tactics or pressure.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why" aria-labelledby="why-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="why-heading">Why homeowners choose The Covedale Craftsman</h2>
+        </div>
+        <p>
+          You’re letting someone into your home — that requires trust. Here’s how I earn it,
+          one visit at a time.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <!-- TRUSTED -->
+        <div class="why-item">
+          <div class="why-head">
+            <div class="why-icon">
+              <!-- shield icon -->
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3 6 5.5v6c0 3.3 2.2 6.4 6 7.5 3.8-1.1 6-4.2 6-7.5v-6L12 3Z"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <span>Trusted &amp; reliable</span>
+          </div>
+          <p>I show up when I say I will, communicate clearly, and treat your home with respect.</p>
+        </div>
+
+        <!-- PRICING -->
+        <div class="why-item">
+          <div class="why-head">
+            <div class="why-icon">
+              <!-- tag icon -->
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 10.5V5a1 1 0 0 1 1-1h5.5L20 13.5 13.5 20 4 10.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle cx="9" cy="7" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <span>Clear, fair pricing</span>
+          </div>
+          <p>You’ll see pricing by task, not by the hour, so you know what to expect before I start.</p>
+        </div>
+
+        <!-- EXCELLENCE -->
+        <div class="why-item">
+          <div class="why-head">
+            <div class="why-icon">
+              <!-- sparkle icon -->
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 4.5 13 8l3.5 1-3.5 1L12 13l-1-2.9L7.5 9 11 8l1-3.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5 5.5 5.5 7 7 7.5 5.5 8 5 9.5 4.5 8 3 7.5 4.5 7 5 5.5Zm13 8 0.5 1.5 1.5.5-1.5.5L18 17 17.5 16l-1.5-.5 1.5-.5 0.5-1.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <span>Excellence guaranteed</span>
+          </div>
+          <p>I don’t rush or cut corners. I stay until the work is done right and you’re happy with it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" aria-labelledby="about-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="about-heading">About Christopher</h2>
+        </div>
+        <p>
+          A calm, detail-oriented craftsman with a background in aviation maintenance and a commitment
+          to serving families in Greater Cincinnati.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I’m Christopher, the owner of The Covedale Craftsman. For 13 years I served in the Ohio Army
+            National Guard as both an aircraft electrician and avionics technician working on Black Hawk
+            helicopters — including a deployment to Syria.
+          </p>
+          <p>
+            That experience taught me the value of discipline, clear communication, and doing the job
+            right the first time. Today, I bring those same standards into your home: showing up when I
+            say I will, respecting your space, and focusing on clean, precise work.
+          </p>
+          <p>
+            When I’m not helping homeowners with projects, I’m with my family and building a business
+            I’m proud of — one that treats people fairly and leaves every home better than I found it.
+          </p>
+        </div>
+
+        <div class="about-photo">
+	  <img src="christopher.jpg" width="300" height="300" alt="Christopher from The Covedale Craftsman">
+        </div>
+      </div>
+    </section>
+
+    <!-- MY PROMISE -->
+    <section id="promise" aria-labelledby="promise-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="promise-heading">My promise to you</h2>
+        </div>
+        <p>
+          This is more than just a job to me. It’s my name, my reputation, and how I support my family.
+        </p>
+      </div>
+
+      <article class="promise">
+        <h3>You’ll get the best experience you’ve ever had with a service provider.</h3>
+        <p>
+          Your business means a lot to me, and I will do everything I can to make working with me
+          simple, clear, and stress-free. From the first message to the final walkthrough, my goal is
+          to be the kind of handyman you’re excited to recommend to friends and family.
+        </p>
+        <p class="promise-signature">
+          — Christopher, owner of The Covedale Craftsman
+        </p>
+      </article>
+    </section>
+
+        <!-- CONTACT -->
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <div>
+        <h2 id="contact-heading">Ready for calm, reliable help?</h2>
+        <p>
+          Reach out with your project and I’ll respond within 24 hours with a clear plan and
+          straightforward pricing. You can call, text, or use the form.
+        </p>
+      </div>
+
+      <!-- Netlify-enabled contact form -->
+      <form
+  	name="contact"
+  	method="POST"
+  	action="/thanks.html"
+  	data-netlify="true"
+  	netlify
+	data-netlify-honeypot="bot-field"
+  	class="contact-form"
+	>
+
+        <!-- Required for Netlify form handling -->
+        <input type="hidden" name="form-name" value="contact" />
+	<div style="display:none" aria-hidden="true">
+  	  <label>
+    	    Don’t fill this out if you’re human:
+    	    <input name="bot-field" />
+  	  </label>
+	</div>
+
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input
+            id="phone"
+            type="tel"
+            name="phone"
+            placeholder="(xxx) xxx-xxxx"
+          />
+        </div>
+
+        <div class="field">
+          <label for="message">How can I help?</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Tell me about the tasks you’d like help with. Photos can be sent by text or email."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">
+          Send request
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <span style="font-size:0.78rem;color:#9ca3af;margin-top:4px;display:block;">
+          I’ll reply within one business day. If it’s urgent, call or text 513-656-8205.
+        </span>
+      </form>
+
+      <div class="contact-meta">
+        <span><strong>Call or Text:</strong> <a href="tel:15136568205" style="color:#e5e7eb;">513-656-8205</a></span>
+        <span><strong>Email:</strong> <a href="mailto:christopher@thecovedalecraftsman.com" style="color:#e5e7eb;">christopher@thecovedalecraftsman.com</a></span>
+        <span><strong>Hours:</strong> Mon–Fri, 9am–5pm • Saturday by request • Sunday off</span>
+      </div>
+    </section>
+
+
+    <footer>
+      &copy; <span id="year"></span> The Covedale Craftsman. Veteran Owned. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
