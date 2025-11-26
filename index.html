@@ -1183,79 +1183,67 @@
         </p>
       </div>
 
-      <!-- Netlify-enabled contact form -->
-      <form
-  	name="contact"
-  	method="POST"
-  	action="/thanks.html"
-  	data-netlify="true"
-  	netlify
-	data-netlify-honeypot="bot-field"
-  	class="contact-form"
-	>
+     <form
+  class="contact-form"
+  action="https://formspree.io/f/xnnyrbaa"
+  method="POST"
+>
+  <!-- Redirect to thank-you page after submit -->
+  <input type="hidden" name="_redirect" value="https://thecovedalecraftsman.com/thanks.html" />
 
-        <!-- Required for Netlify form handling -->
-        <input type="hidden" name="form-name" value="contact" />
-	<div style="display:none" aria-hidden="true">
-  	  <label>
-    	    Don’t fill this out if you’re human:
-    	    <input name="bot-field" />
-  	  </label>
-	</div>
+  <div class="field">
+    <label for="name">Name</label>
+    <input
+      id="name"
+      type="text"
+      name="name"
+      placeholder="Your name"
+      required
+    />
+  </div>
 
+  <div class="field">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      type="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+    />
+  </div>
 
-        <div class="field">
-          <label for="name">Name</label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            placeholder="Your name"
-            required
-          />
-        </div>
+  <div class="field">
+    <label for="phone">Phone</label>
+    <input
+      id="phone"
+      type="tel"
+      name="phone"
+      placeholder="(xxx) xxx-xxxx"
+    />
+  </div>
 
-        <div class="field">
-          <label for="email">Email</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="you@example.com"
-            required
-          />
-        </div>
+  <div class="field">
+    <label for="message">How can I help?</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      placeholder="Tell me about the tasks you’d like help with. Photos can be sent by text or email."
+      required
+    ></textarea>
+  </div>
 
-        <div class="field">
-          <label for="phone">Phone</label>
-          <input
-            id="phone"
-            type="tel"
-            name="phone"
-            placeholder="(xxx) xxx-xxxx"
-          />
-        </div>
+  <button type="submit">
+    Send request
+    <span aria-hidden="true">→</span>
+  </button>
 
-        <div class="field">
-          <label for="message">How can I help?</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            placeholder="Tell me about the tasks you’d like help with. Photos can be sent by text or email."
-            required
-          ></textarea>
-        </div>
+  <span style="font-size:0.78rem;color:#9ca3af;margin-top:4px;display:block;">
+    I’ll reply within one business day. If it’s urgent, call or text 513-656-8205.
+  </span>
+</form>
 
-        <button type="submit">
-          Send request
-          <span aria-hidden="true">→</span>
-        </button>
-
-        <span style="font-size:0.78rem;color:#9ca3af;margin-top:4px;display:block;">
-          I’ll reply within one business day. If it’s urgent, call or text 513-656-8205.
-        </span>
-      </form>
 
       <div class="contact-meta">
         <span><strong>Call or Text:</strong> <a href="tel:15136568205" style="color:#e5e7eb;">513-656-8205</a></span>
@@ -1275,3 +1263,4 @@
   </script>
 </body>
 </html>
+
