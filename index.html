@@ -532,15 +532,20 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: minmax(330px, 0.76fr) 1.24fr;
-      gap: 76px;
+      grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
+      gap: 72px;
       align-items: center;
     }
 
     .about-photo {
+      display: block;
       width: 100%;
+      max-width: 420px;
+      height: auto;
       aspect-ratio: 4 / 5;
       object-fit: cover;
+      object-position: center top;
+      justify-self: center;
       border-radius: 34px;
       box-shadow: var(--shadow);
     }
@@ -741,7 +746,7 @@
       .process-step h3 { margin-top: 22px; }
       .service-card { min-height: 0; }
       .service-card h3 { margin-top: 36px; }
-      .about-photo { aspect-ratio: 1 / 1; max-width: 420px; }
+      .about-photo { aspect-ratio: 1 / 1; max-width: 360px; }
       .contact-form { padding: 24px; }
       .field-full, .submit-row { grid-column: 1; }
     }
