@@ -249,7 +249,8 @@
 
     .hero-photo {
       width: 100%;
-      height: 680px;
+      height: auto;
+      aspect-ratio: 3 / 2;
       object-fit: cover;
       object-position: center;
       border-radius: 42px;
@@ -531,15 +532,16 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: minmax(330px, 0.76fr) 1.24fr;
+      grid-template-columns: minmax(280px, 420px) 1fr;
       gap: 76px;
       align-items: center;
     }
 
     .about-photo {
       width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: contain;
       border-radius: 34px;
       box-shadow: var(--shadow);
     }
@@ -740,7 +742,7 @@
       .process-step h3 { margin-top: 22px; }
       .service-card { min-height: 0; }
       .service-card h3 { margin-top: 36px; }
-      .about-photo { aspect-ratio: 1 / 1; max-width: 420px; }
+      .about-photo { aspect-ratio: auto; max-width: 420px; }
       .contact-form { padding: 24px; }
       .field-full, .submit-row { grid-column: 1; }
     }
@@ -1004,7 +1006,7 @@
 
     <section id="about" class="section about" aria-labelledby="about-heading">
       <div class="shell about-grid">
-        <img class="about-photo" src="craftsman_portrait_by_the_home_entrance.png" width="1024" height="1536" alt="Christopher, owner of The Covedale Craftsman" />
+        <img class="about-photo" src="craftsman_portrait_by_the_home_entrance.png" width="1086" height="1448" alt="Christopher, owner of The Covedale Craftsman" />
         <div class="about-copy">
           <p class="eyebrow">Meet Christopher</p>
           <h2 id="about-heading">The person who answers your message is the person who shows up.</h2>
