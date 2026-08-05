@@ -428,22 +428,21 @@
       font-size: 0.93rem;
     }
 
-    .service-card-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      margin-top: 22px;
-      color: #b5dc8d;
-      font-size: 0.9rem;
-      font-weight: 800;
-      text-decoration: none;
+    .service-links {
+      display: grid;
+      gap: 9px;
+      margin-top: 24px;
     }
 
-    .service-card-link:hover {
-      color: #d4efb9;
-      text-decoration: underline;
-      text-underline-offset: 4px;
+    .service-link {
+      width: fit-content;
+      color: #b5dc8d;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 850;
     }
+
+    .service-link:hover { color: #d1eeaf; }
 
     .home-services { background: var(--white); }
 
@@ -891,11 +890,12 @@
         <div class="service-grid">
           <article class="service-card">
             <div class="icon" aria-hidden="true">◉</div>
-            <h3>Video doorbells &amp; cameras</h3>
-            <p>Placement, mounting, power, Wi-Fi connection, app setup, alerts, recording settings, and a complete final test.</p>
-            <a class="service-card-link" href="/video-doorbell-installation-cincinnati/">
-              Explore video doorbell installation <span aria-hidden="true">→</span>
-            </a>
+            <h3>Video doorbells &amp; security cameras</h3>
+            <p>Thoughtful placement, secure mounting, battery or existing-power considerations, basic setup assistance, and final verification for homeowner-owned devices.</p>
+            <div class="service-links">
+              <a class="service-link" href="/video-doorbell-installation-cincinnati/">Explore video doorbell installation &nbsp;→</a>
+              <a class="service-link" href="/security-camera-installation-cincinnati/">Explore security camera installation &nbsp;→</a>
+            </div>
           </article>
           <article class="service-card">
             <div class="icon" aria-hidden="true">⌁</div>
