@@ -399,6 +399,8 @@
     }
 
     .service-card {
+      display: flex;
+      flex-direction: column;
       min-height: 285px;
       padding: 30px;
       border-radius: 24px;
@@ -433,7 +435,8 @@
     .service-links {
       display: grid;
       gap: 9px;
-      margin-top: 24px;
+      margin-top: auto;
+      padding-top: 24px;
     }
 
     .service-link {
@@ -450,11 +453,13 @@
 
     .home-service-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
     .home-service-card {
+      display: flex;
+      flex-direction: column;
       padding: 34px;
       border: 1px solid var(--line);
       border-radius: 24px;
@@ -472,6 +477,18 @@
       margin: 0;
       color: var(--ink-soft);
     }
+
+    .home-service-link {
+      width: fit-content;
+      margin-top: auto;
+      padding-top: 22px;
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 850;
+    }
+
+    .home-service-link:hover { color: var(--blue-dark); }
 
     .home-service-note {
       margin-top: 20px;
@@ -724,6 +741,7 @@
       .process-step:nth-child(2) { border-right: 0; }
       .process-step:nth-child(n+3) { border-top: 1px solid var(--line); }
       .service-grid, .experience-grid, .review-grid { grid-template-columns: repeat(2, 1fr); }
+      .home-service-grid { grid-template-columns: repeat(2, 1fr); }
       .about-grid, .contact-grid { gap: 44px; }
     }
 
@@ -895,37 +913,27 @@
         <div class="service-grid">
           <article class="service-card">
             <div class="icon" aria-hidden="true">◉</div>
-            <h3>Video doorbells &amp; security cameras</h3>
-            <p>Thoughtful placement, secure mounting, battery or existing-power considerations, basic setup assistance, and final verification for homeowner-owned devices.</p>
+            <h3>Video doorbells</h3>
+            <p>Installation, setup, and troubleshooting for homeowner-owned devices—with careful placement and the complete usable setup checked before I leave.</p>
             <div class="service-links">
               <a class="service-link" href="/video-doorbell-installation-cincinnati/">Explore video doorbell installation &nbsp;→</a>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">◇</div>
+            <h3>Security cameras</h3>
+            <p>Thoughtful placement and secure installation for homeowner-owned smart cameras, with the finished position and operation reviewed before I leave.</p>
+            <div class="service-links">
               <a class="service-link" href="/security-camera-installation-cincinnati/">Explore security camera installation &nbsp;→</a>
             </div>
           </article>
           <article class="service-card">
-            <div class="icon" aria-hidden="true">⌁</div>
-            <h3>Smart thermostats</h3>
-            <p>Selected thermostat projects may be a fit. Send the brand, model, and photos of the current setup for review before scheduling.</p>
-          </article>
-          <article class="service-card">
-            <div class="icon" aria-hidden="true">◇</div>
-            <h3>Smart switches &amp; lighting</h3>
-            <p>Selected connected switches and lighting devices are reviewed by model, existing setup, wiring, and the result you want before a project is confirmed.</p>
-          </article>
-          <article class="service-card">
             <div class="icon" aria-hidden="true">⌂</div>
-            <h3>Smart locks &amp; garage access</h3>
-            <p>Selected smart-lock and garage-control projects are reviewed by model, door or opener compatibility, and the current setup before scheduling.</p>
-          </article>
-          <article class="service-card">
-            <div class="icon" aria-hidden="true">⌁</div>
-            <h3>Wi-Fi &amp; device connectivity</h3>
-            <p>Basic connection help may be included with a suitable device installation. Advanced network design, rewiring, and whole-home Wi-Fi work are outside the standard scope.</p>
-          </article>
-          <article class="service-card">
-            <div class="icon" aria-hidden="true">▣</div>
-            <h3>TV mounting &amp; setup</h3>
-            <p>Thoughtful height and placement, secure mounting, cable management, device connection, and a clean finished result.</p>
+            <h3>Select smart-home devices</h3>
+            <p>Thermostats, switches, lighting, smart locks, garage controls, and basic device connection help are reviewed by model and existing setup before scheduling.</p>
+            <div class="service-links">
+              <a class="service-link" href="#contact">Ask about your device &nbsp;→</a>
+            </div>
           </article>
         </div>
       </div>
@@ -944,6 +952,11 @@
         </div>
 
         <div class="home-service-grid">
+          <article class="home-service-card">
+            <h3>TV mounting &amp; setup</h3>
+            <p>Thoughtful placement, secure mounting, organized visible cables, device connection, and a finished setup that’s tested before I leave.</p>
+            <a class="home-service-link" href="/tv-mounting-cincinnati/">Explore TV mounting &amp; setup &nbsp;→</a>
+          </article>
           <article class="home-service-card">
             <h3>Fixtures, fans &amp; minor electrical</h3>
             <p>Light fixtures, ceiling fans, switches, outlets, exterior lighting, and focused electrical troubleshooting within the scope of the project.</p>
@@ -1012,18 +1025,18 @@
         <div class="review-grid">
           <article class="review">
             <div class="stars" aria-label="Five stars">★★★★★</div>
-            <blockquote>“Christopher responded promptly, gave an upfront price, communicated clearly, was punctual and kind, and left the area thoroughly cleaned.”</blockquote>
-            <cite>Stacey · Cincinnati</cite>
+            <blockquote>“With Mr. Christopher, you'll receive no drama and high quality work. … The whole process was smooth, professional, and timely, and at a fair price. I'll be a customer as long as he'll allow me to be one.”</blockquote>
+            <cite>Brad Bell · Google review</cite>
           </article>
           <article class="review">
             <div class="stars" aria-label="Five stars">★★★★★</div>
-            <blockquote>“I'm very pleased with the quality, punctuality, and professionalism Christopher brings to his work. Without a doubt, I'll be hiring him again.”</blockquote>
-            <cite>Jessy · Cincinnati</cite>
+            <blockquote>“When I first reached out, he got back to me promptly. He gave me a price up front that was very reasonable. He was punctual and communicated very well. He was very kind. He thoroughly cleaned the area when he was done.”</blockquote>
+            <cite>Stacey Jones · Google review</cite>
           </article>
           <article class="review">
             <div class="stars" aria-label="Five stars">★★★★★</div>
-            <blockquote>“Christopher was prompt, professional, and very knowledgeable. He got my Ring doorbell working when I thought I'd need a new one.”</blockquote>
-            <cite>Gina · Cincinnati</cite>
+            <blockquote>“He was prompt, professional, and very knowledgeable about his craft. He got my Ring doorbell working, which I thought I would need to buy a new one! He also fixed the latch on my fence that was not working properly.”</blockquote>
+            <cite>Gina Harbison · Google review</cite>
           </article>
         </div>
       </div>
