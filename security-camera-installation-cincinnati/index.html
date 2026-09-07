@@ -519,6 +519,11 @@
     .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
     footer a { color: #aab6bb; text-decoration: none; }
 
+    @media (min-width: 1041px) {
+      .process .section-head { grid-template-columns: 1.18fr 0.82fr; }
+      .process .section-head h2 { font-size: clamp(2.55rem, 4.2vw, 4.35rem); }
+    }
+
     @media (max-width: 1040px) {
       .desktop-nav { display: none; }
       .hero-grid { grid-template-columns: 1fr; }
