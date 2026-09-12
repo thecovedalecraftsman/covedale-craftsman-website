@@ -580,6 +580,33 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition: none !important; }
     }
+  
+    .mobile-text-bar { display: none; }
+
+    @media (max-width: 780px) {
+      .mobile-text-bar {
+        position: fixed;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0 20px;
+        border-radius: 999px;
+        color: var(--white);
+        background: var(--blue);
+        box-shadow: 0 14px 34px rgba(7, 77, 102, 0.34);
+        text-decoration: none;
+        font-size: 0.94rem;
+        font-weight: 850;
+      }
+
+      footer { padding-bottom: 100px; }
+    }
+
   </style>
 </head>
 <body>
@@ -594,7 +621,7 @@
         <a href="#project">Real Project</a>
         <a href="#faq">FAQs</a>
       </nav>
-      <a class="header-cta" href="sms:+15136568205">Text Christopher</a>
+      <a class="header-cta" href="sms:+15136568205">Text Photos for a Quote</a>
     </div>
   </header>
 
@@ -608,8 +635,8 @@
             Thoughtful placement and secure installation for Ring, Arlo, Eufy, Blink, Nest and similar homeowner-owned cameras—so the finished view works for what you actually want to see.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="sms:+15136568205">Text Christopher</a>
-            <a class="button button-secondary" href="#contact">Request a Quote</a>
+            <a class="button button-primary" href="sms:+15136568205">Text Photos for a Quote</a>
+            <a class="button button-secondary" href="#contact">Use Quote Form</a>
           </div>
           <div class="send-note">
             <strong>For the clearest next step, send:</strong>
@@ -907,7 +934,7 @@
             <span>Covedale</span><span>Cheviot</span><span>Delhi Township</span><span>Delhi Hills</span><span>Green Township</span><span>Bridgetown</span><span>East Price Hill</span><span>West Price Hill</span>
           </div>
           <p><strong>Not sure?</strong> Text your address or ZIP code for a clear answer.</p>
-          <a class="button button-primary" href="sms:+15136568205">Text Christopher</a>
+          <a class="button button-primary" href="sms:+15136568205">Text Photos for a Quote</a>
         </div>
       </div>
     </section>
@@ -918,7 +945,7 @@
         <h2 id="promise-heading">Everything Working Before I Leave™</h2>
         <p>Installation is not the finish line. The project is complete when the camera is securely installed, the finished position has been reviewed and everything works the way you expected within the agreed scope.</p>
         <div class="promise-actions">
-          <a class="button button-primary" href="sms:+15136568205">Text Christopher</a>
+          <a class="button button-primary" href="sms:+15136568205">Text Photos for a Quote</a>
           <a class="button button-secondary" href="#contact">Request a Quote</a>
         </div>
       </div>
@@ -938,7 +965,7 @@
             <li>What you want each camera to help you see</li>
           </ul>
           <div class="contact-methods">
-            <a href="sms:+15136568205">Text Christopher: 513-656-8205</a>
+            <a href="sms:+15136568205">Text photos for a quote: 513-656-8205</a>
             <a href="mailto:christopher@thecovedalecraftsman.com">christopher@thecovedalecraftsman.com</a>
             <span>Monday–Friday · 9:00 a.m.–5:00 p.m.</span>
           </div>
@@ -947,8 +974,9 @@
           <input type="hidden" name="_redirect" value="https://thecovedalecraftsman.com/thanks.html" />
           <input type="hidden" name="service" value="Residential security camera installation" />
           <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
-          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
-          <div class="field field-full"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" /></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required /></div>
+          <div class="field"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" /></div>
+          <div class="field"><label for="location">Neighborhood or ZIP code</label><input id="location" name="neighborhood_or_zip" type="text" autocomplete="postal-code" required /></div>
           <div class="field"><label for="brand">Camera brand and model (if known)</label><input id="brand" name="camera_brand_model" type="text" placeholder="Example: Ring Stick Up Cam" /></div>
           <div class="field"><label for="count">How many cameras?</label><input id="count" name="camera_count" type="number" min="1" inputmode="numeric" /></div>
           <div class="field field-full"><label for="message">Tell me about the project</label><textarea id="message" name="message" rows="6" placeholder="Where would you like the cameras installed, and what do you want each one to help you see?" required></textarea></div>
@@ -957,6 +985,8 @@
       </div>
     </section>
   </main>
+
+  <a class="mobile-text-bar" href="sms:+15136568205" aria-label="Text photos to Christopher for a quote">Text Photos for a Quote</a>
 
   <footer>
     <div class="shell footer-inner">
