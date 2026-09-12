@@ -87,13 +87,40 @@
     @media(max-width:520px){.type-grid{grid-template-columns:1fr}.fit-card,.scope-card,.policy-card,.contact-form{padding:24px}.hero-actions .button,.promise-actions .button{width:100%}.hero-photo img{border-radius:25px}.process-step{grid-template-columns:42px 1fr}}
     @media(max-width:780px){.hero-photo img,.proof-images img,.process-photo{height:auto;aspect-ratio:auto;object-fit:contain}.photo-caption{position:static;margin-top:10px;color:var(--ink);background:rgba(255,255,255,.78)}.proof-images{gap:16px}.proof-images img:last-child{max-width:100%;margin:0;border:0}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  
+    .mobile-text-bar { display: none; }
+
+    @media (max-width: 780px) {
+      .mobile-text-bar {
+        position: fixed;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0 20px;
+        border-radius: 999px;
+        color: var(--white);
+        background: var(--blue);
+        box-shadow: 0 14px 34px rgba(7, 77, 102, 0.34);
+        text-decoration: none;
+        font-size: 0.94rem;
+        font-weight: 850;
+      }
+
+      footer { padding-bottom: 100px; }
+    }
+
   </style>
 </head>
 <body>
   <header class="site-header"><div class="shell header-inner">
     <a class="brand" href="../" aria-label="The Covedale Craftsman home"><img src="../logo-covedalecraftsman.png" width="1000" height="500" alt="The Covedale Craftsman" /></a>
     <nav class="desktop-nav" aria-label="Page navigation"><a href="#furniture">Furniture</a><a href="#process">How It Works</a><a href="#scope">Project Fit</a><a href="#faq">FAQs</a></nav>
-    <a class="header-cta" href="sms:+15136568205">Text Christopher</a>
+    <a class="header-cta" href="sms:+15136568205">Text Photos for a Quote</a>
   </div></header>
   <main id="top">
     <section class="hero"><div class="shell hero-grid">
@@ -101,7 +128,7 @@
         <p class="eyebrow">Furniture Assembly · Cincinnati’s West Side</p>
         <h1>Furniture Assembly on Cincinnati’s West Side.</h1>
         <p class="hero-copy">Careful residential assembly for substantial pieces and multi-item projects—with the parts organized, the details checked and the finished furniture ready to use.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#contact">Request an Assembly Quote</a><a class="button button-secondary" href="sms:+15136568205">Text Christopher</a></div>
+        <div class="hero-actions"><a class="button button-primary" href="sms:+15136568205">Text Photos for a Quote</a><a class="button button-secondary" href="#contact">Use Quote Form</a></div>
         <div class="send-note"><strong>For an accurate project-based quote, send:</strong><span>Product link, brand or model · Number of items · Photos of the boxes and intended location · Lifting, access or anchoring concerns</span></div>
         <p class="hero-trust">Veteran-owned · Owner-operated · Projects reviewed before scheduling</p>
       </div>
@@ -196,15 +223,17 @@
 
     <section class="section related" aria-labelledby="related-heading"><div class="shell"><div class="related-card"><div><p class="eyebrow">Planning a complete media setup?</p><h2 id="related-heading">TV stands, carts—and TVs that belong on the wall.</h2><p>Selected TV stands, media consoles and residential rolling carts can be reviewed here. For fixed and tilting wall mounts, see TV Mounting &amp; Setup.</p></div><figure class="related-photo"><img src="rolling-tv-cart-assembled-cincinnati.webp" width="1152" height="1536" alt="Completed residential rolling TV cart with mounted television and equipment shelf" loading="lazy" decoding="async" /><figcaption>Recent project · rolling TV cart</figcaption></figure><a class="button button-primary" href="../tv-mounting-cincinnati/">Explore TV mounting →</a></div></div></section>
 
-    <section class="section service-area" aria-labelledby="area-heading"><div class="shell area-grid"><div><p class="eyebrow">Local residential service</p><h2 id="area-heading">Furniture assembly on Cincinnati’s West Side.</h2></div><div class="area-copy"><p>The Covedale Craftsman primarily serves homeowners on Cincinnati’s West Side and in nearby communities when the project is a fit.</p><div class="area-chips" aria-label="Primary service areas"><span>Covedale</span><span>Cheviot</span><span>Delhi Township</span><span>Delhi Hills</span><span>Green Township</span><span>Bridgetown</span><span>East Price Hill</span><span>West Price Hill</span></div><p><strong>Not sure?</strong> Text your address or ZIP code for a clear answer.</p><a class="button button-primary" href="sms:+15136568205">Text Christopher</a></div></div></section>
+    <section class="section service-area" aria-labelledby="area-heading"><div class="shell area-grid"><div><p class="eyebrow">Local residential service</p><h2 id="area-heading">Furniture assembly on Cincinnati’s West Side.</h2></div><div class="area-copy"><p>The Covedale Craftsman primarily serves homeowners on Cincinnati’s West Side and in nearby communities when the project is a fit.</p><div class="area-chips" aria-label="Primary service areas"><span>Covedale</span><span>Cheviot</span><span>Delhi Township</span><span>Delhi Hills</span><span>Green Township</span><span>Bridgetown</span><span>East Price Hill</span><span>West Price Hill</span></div><p><strong>Not sure?</strong> Text your address or ZIP code for a clear answer.</p><a class="button button-primary" href="sms:+15136568205">Text Photos for a Quote</a></div></div></section>
 
-    <section class="promise" aria-labelledby="promise-heading"><div class="shell"><p class="eyebrow">My promise</p><h2 id="promise-heading">Everything Working Before I Leave™</h2><p>Your furniture should be stable, aligned, checked and ready to use—not simply assembled enough to stand.</p><div class="promise-actions"><a class="button button-primary" href="#contact">Request an Assembly Quote</a><a class="button button-secondary" href="sms:+15136568205">Text Christopher</a></div></div></section>
+    <section class="promise" aria-labelledby="promise-heading"><div class="shell"><p class="eyebrow">My promise</p><h2 id="promise-heading">Everything Working Before I Leave™</h2><p>Your furniture should be stable, aligned, checked and ready to use—not simply assembled enough to stand.</p><div class="promise-actions"><a class="button button-primary" href="#contact">Request an Assembly Quote</a><a class="button button-secondary" href="sms:+15136568205">Text Photos for a Quote</a></div></div></section>
 
     <section id="contact" class="section contact" aria-labelledby="contact-heading"><div class="shell contact-grid">
-      <div class="contact-copy"><p class="eyebrow">Start with the photos</p><h2 id="contact-heading">Show me the item and where it’s going.</h2><p>I’ll review the details, confirm whether the project is a good fit and provide a project-based price before scheduling.</p><ul class="send-list"><li>Product link, brand or exact model</li><li>Number of items</li><li>Photo of the boxes or existing furniture</li><li>Photo of the intended room or location</li><li>Known lifting, stair, access or anchoring concerns</li></ul><div class="contact-methods"><a href="sms:+15136568205">Text Christopher: 513-656-8205</a><a href="mailto:christopher@thecovedalecraftsman.com">christopher@thecovedalecraftsman.com</a><span>Monday–Friday · 9:00 a.m.–5:00 p.m.</span></div></div>
-      <form class="contact-form" action="https://formspree.io/f/xnnyrbaa" method="POST"><input type="hidden" name="_redirect" value="https://thecovedalecraftsman.com/thanks.html" /><input type="hidden" name="service" value="Furniture assembly" /><div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required /></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div><div class="field field-full"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" /></div><div class="field"><label for="item">Product, brand or model</label><input id="item" name="product_brand_model" type="text" placeholder="Paste a product link if available" /></div><div class="field"><label for="count">Number of items</label><input id="count" name="item_count" type="text" placeholder="Example: one island and two nightstands" /></div><div class="field field-full"><label for="message">Tell me about the project</label><textarea id="message" name="message" rows="6" placeholder="Where will the furniture go? Mention stairs, lifting, anchoring or damaged packaging." required></textarea></div><div class="submit-row"><button class="button button-primary" type="submit">Send request</button><span>You can text photos after submitting. Clear, project-based pricing is confirmed before work begins.</span></div></form>
+      <div class="contact-copy"><p class="eyebrow">Start with the photos</p><h2 id="contact-heading">Show me the item and where it’s going.</h2><p>I’ll review the details, confirm whether the project is a good fit and provide a project-based price before scheduling.</p><ul class="send-list"><li>Product link, brand or exact model</li><li>Number of items</li><li>Photo of the boxes or existing furniture</li><li>Photo of the intended room or location</li><li>Known lifting, stair, access or anchoring concerns</li></ul><div class="contact-methods"><a href="sms:+15136568205">Text photos for a quote: 513-656-8205</a><a href="mailto:christopher@thecovedalecraftsman.com">christopher@thecovedalecraftsman.com</a><span>Monday–Friday · 9:00 a.m.–5:00 p.m.</span></div></div>
+      <form class="contact-form" action="https://formspree.io/f/xnnyrbaa" method="POST"><input type="hidden" name="_redirect" value="https://thecovedalecraftsman.com/thanks.html" /><input type="hidden" name="service" value="Furniture assembly" /><div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required /></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required /></div><div class="field"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" /></div><div class="field"><label for="location">Neighborhood or ZIP code</label><input id="location" name="neighborhood_or_zip" type="text" autocomplete="postal-code" required /></div><div class="field"><label for="item">Product, brand or model</label><input id="item" name="product_brand_model" type="text" placeholder="Paste a product link if available" /></div><div class="field"><label for="count">Number of items</label><input id="count" name="item_count" type="text" placeholder="Example: one island and two nightstands" /></div><div class="field field-full"><label for="message">Tell me about the project</label><textarea id="message" name="message" rows="6" placeholder="Where will the furniture go? Mention stairs, lifting, anchoring or damaged packaging." required></textarea></div><div class="submit-row"><button class="button button-primary" type="submit">Send request</button><span>You can text photos after submitting. Clear, project-based pricing is confirmed before work begins.</span></div></form>
     </div></section>
   </main>
+  <a class="mobile-text-bar" href="sms:+15136568205" aria-label="Text photos to Christopher for a quote">Text Photos for a Quote</a>
+
   <footer><div class="shell footer-inner"><span>© <span id="year"></span> The Covedale Craftsman. All rights reserved.</span><span><a href="../">Home</a> · Veteran-owned · Greater Cincinnati</span></div></footer>
   <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 </body>
