@@ -593,6 +593,33 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition: none !important; }
     }
+  
+    .mobile-text-bar { display: none; }
+
+    @media (max-width: 780px) {
+      .mobile-text-bar {
+        position: fixed;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0 20px;
+        border-radius: 999px;
+        color: var(--white);
+        background: var(--blue);
+        box-shadow: 0 14px 34px rgba(7, 77, 102, 0.34);
+        text-decoration: none;
+        font-size: 0.94rem;
+        font-weight: 850;
+      }
+
+      footer { padding-bottom: 100px; }
+    }
+
   </style>
 </head>
 <body>
@@ -607,7 +634,7 @@
         <a href="#ask-first">Ask First</a>
         <a href="#faq">FAQs</a>
       </nav>
-      <a class="header-cta" href="sms:+15136568205">Text Christopher</a>
+      <a class="header-cta" href="sms:+15136568205">Text Photos for a Quote</a>
     </div>
   </header>
 
@@ -619,8 +646,8 @@
           <h1>Smart home installation in Cincinnati—set up, tested, and explained.</h1>
           <p class="hero-copy">From video doorbells and security cameras to select connected devices, I help homeowners get technology installed carefully and working the way they expected.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="sms:+15136568205">Text Christopher</a>
-            <a class="button button-secondary" href="#contact">Request a Quote</a>
+            <a class="button button-primary" href="sms:+15136568205">Text Photos for a Quote</a>
+            <a class="button button-secondary" href="#contact">Use Quote Form</a>
           </div>
           <div class="send-note">
             <strong>For the clearest next step, send:</strong>
@@ -792,12 +819,12 @@
     <section class="section service-area" aria-labelledby="area-heading">
       <div class="shell area-grid">
         <div><p class="eyebrow">Local residential service</p><h2 id="area-heading">Serving Cincinnati’s West Side and nearby communities.</h2></div>
-        <div class="area-copy"><p>The Covedale Craftsman primarily serves homeowners in Cincinnati’s West Side and nearby communities when the project is a fit.</p><div class="area-chips"><span>Covedale</span><span>Cheviot</span><span>Delhi Township</span><span>Delhi Hills</span><span>Green Township</span><span>Bridgetown</span><span>East Price Hill</span><span>West Price Hill</span></div><p><strong>Not sure?</strong> Text your address or ZIP code for a clear answer.</p><a class="button button-primary" href="sms:+15136568205">Text Christopher</a></div>
+        <div class="area-copy"><p>The Covedale Craftsman primarily serves homeowners in Cincinnati’s West Side and nearby communities when the project is a fit.</p><div class="area-chips"><span>Covedale</span><span>Cheviot</span><span>Delhi Township</span><span>Delhi Hills</span><span>Green Township</span><span>Bridgetown</span><span>East Price Hill</span><span>West Price Hill</span></div><p><strong>Not sure?</strong> Text your address or ZIP code for a clear answer.</p><a class="button button-primary" href="sms:+15136568205">Text Photos for a Quote</a></div>
       </div>
     </section>
 
     <section class="promise" aria-labelledby="promise-heading">
-      <div class="shell"><p class="eyebrow">My promise</p><h2 id="promise-heading">Everything Working Before I Leave™</h2><p>Installation is not the finish line. The project is complete when the agreed work has been tested, you understand the finished setup and everything works the way you expected within the confirmed scope.</p><div class="promise-actions"><a class="button button-primary" href="sms:+15136568205">Text Christopher</a><a class="button button-secondary" href="#contact">Request a Quote</a></div></div>
+      <div class="shell"><p class="eyebrow">My promise</p><h2 id="promise-heading">Everything Working Before I Leave™</h2><p>Installation is not the finish line. The project is complete when the agreed work has been tested, you understand the finished setup and everything works the way you expected within the confirmed scope.</p><div class="promise-actions"><a class="button button-primary" href="sms:+15136568205">Text Photos for a Quote</a><a class="button button-secondary" href="#contact">Request a Quote</a></div></div>
     </section>
 
     <section id="contact" class="section contact" aria-labelledby="contact-heading">
@@ -805,13 +832,14 @@
         <div class="contact-copy">
           <p class="eyebrow">Start the conversation</p><h2 id="contact-heading">Tell me what you’re trying to make work.</h2><p>Texting is usually the easiest way to begin because photos and a model number help me understand the device, location and current setup.</p>
           <ul class="send-list"><li>Device brand and model, if known</li><li>Photos of the device and proposed location</li><li>Whether it is new or already installed</li><li>How it is powered</li><li>What you want it to do—or what is going wrong</li></ul>
-          <div class="contact-methods"><a href="sms:+15136568205">Text Christopher: 513-656-8205</a><a href="mailto:christopher@thecovedalecraftsman.com">christopher@thecovedalecraftsman.com</a><span>Monday–Friday · 9:00 a.m.–5:00 p.m.</span></div>
+          <div class="contact-methods"><a href="sms:+15136568205">Text photos for a quote: 513-656-8205</a><a href="mailto:christopher@thecovedalecraftsman.com">christopher@thecovedalecraftsman.com</a><span>Monday–Friday · 9:00 a.m.–5:00 p.m.</span></div>
         </div>
         <form class="contact-form" action="https://formspree.io/f/xnnyrbaa" method="POST">
           <input type="hidden" name="_redirect" value="https://thecovedalecraftsman.com/thanks.html" /><input type="hidden" name="service" value="Smart home installation and troubleshooting" />
           <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
-          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
-          <div class="field field-full"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" /></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required /></div>
+          <div class="field"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" /></div>
+          <div class="field"><label for="location">Neighborhood or ZIP code</label><input id="location" name="neighborhood_or_zip" type="text" autocomplete="postal-code" required /></div>
           <div class="field"><label for="device">Device brand and model (if known)</label><input id="device" name="device_brand_model" type="text" placeholder="Example: Ring Video Doorbell" /></div>
           <div class="field"><label for="stage">Current status</label><select id="stage" name="project_status"><option value="">Select one</option><option>Not installed yet</option><option>Installed but not working</option><option>Working but needs help</option><option>Not sure what to buy</option></select></div>
           <div class="field field-full"><label for="message">Tell me about the project</label><textarea id="message" name="message" rows="6" placeholder="What would you like the device to do, and what has already been tried?" required></textarea></div>
@@ -820,6 +848,8 @@
       </div>
     </section>
   </main>
+
+  <a class="mobile-text-bar" href="sms:+15136568205" aria-label="Text photos to Christopher for a quote">Text Photos for a Quote</a>
 
   <footer><div class="shell footer-inner"><span>© <span id="year"></span> The Covedale Craftsman. All rights reserved.</span><span><a href="../">Home</a> · Veteran-owned · Greater Cincinnati</span></div></footer>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
