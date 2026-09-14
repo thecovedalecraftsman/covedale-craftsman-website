@@ -648,13 +648,22 @@
     .related { background: var(--white); }
     .related-card {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 35px;
+      grid-template-columns: 190px minmax(0, 1fr) auto;
+      gap: 30px;
       align-items: center;
       padding: 33px;
       border-radius: 25px;
       border: 1px solid var(--line);
       background: var(--blue-pale);
+    }
+    .related-photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
     }
     .related-card h2 {
       margin: 0;
@@ -789,6 +798,7 @@
       .about-photo { max-width: 420px; }
       .review-card { padding: 31px; }
       .related-card { grid-template-columns: 1fr; }
+      .related-photo { width: min(100%, 260px); }
       .field-full, .submit-row { grid-column: 1; }
     }
 
@@ -1189,6 +1199,7 @@
     <section class="section related" aria-labelledby="related-heading">
       <div class="shell">
         <div class="related-card">
+          <img class="related-photo" src="../furniture-assembly-cincinnati/rolling-tv-cart-assembled-cincinnati.webp" width="1152" height="1536" alt="Completed rolling TV cart assembled by The Covedale Craftsman" loading="lazy" decoding="async" />
           <div>
             <p class="eyebrow">A related furniture service</p>
             <h2 id="related-heading">Not every TV belongs on the wall.</h2>
