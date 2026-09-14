@@ -70,7 +70,7 @@
             "name": "What types of TV mounts do you install?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The standard service focuses on select fixed and tilting mounts after compatibility review. Full-motion and other nonstandard mounts are not currently offered."
+              "text": "The standard service includes select fixed, tilting and full-motion mounts after compatibility review. Every installation is still screened for TV and mount compatibility, wall construction, mounting height and a safe lifting plan."
             }
           },
           {
@@ -558,6 +558,26 @@
       font-size: 1.6rem;
     }
 
+
+    .project-proof { background: var(--white); }
+    .project-gallery {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 36px;
+    }
+    .project-photo {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    .project-photo.main { grid-row: span 2; min-height: 540px; }
+    .project-photo.action { object-position: center 42%; }
+
     .about { background: var(--white); }
     .about-grid { display: grid; grid-template-columns: minmax(280px, 420px) 1fr; gap: 74px; align-items: center; }
     .about-photo {
@@ -766,7 +786,7 @@
       .process-step:first-child { border-top: 0; }
       .process-step h3 { margin-top: 20px; }
       .verify-list { grid-template-columns: 1fr; }
-      .about-photo { max-width: 420px; }
+      .project-gallery { grid-template-columns: 1fr; grid-template-rows: auto; }\n      .project-photo, .project-photo.main { grid-row: auto; min-height: 0; height: auto; }\n            .about-photo { max-width: 420px; }
       .review-card { padding: 31px; }
       .related-card { grid-template-columns: 1fr; }
       .field-full, .submit-row { grid-column: 1; }
@@ -895,7 +915,7 @@
           <article class="scope-card">
             <h3>Standard installations may include</h3>
             <ul class="check-list">
-              <li>Select fixed and tilting mounts</li>
+              <li>Select fixed, tilting and full-motion mounts</li>
               <li>Drywall over confirmed wood studs</li>
               <li>Placement discussion and approval</li>
               <li>Homeowner-provided compatible mounts</li>
@@ -919,7 +939,7 @@
           <article class="scope-card excluded">
             <h3>Not currently offered</h3>
             <ul class="plain-list">
-              <li>Full-motion or fireplace installations</li>
+              <li>Fireplace installations</li>
               <li>Outdoor or ceiling-mounted TVs</li>
               <li>Special corner or extremely high installations</li>
               <li>Tile, stone or difficult masonry</li>
@@ -930,6 +950,26 @@
         </div>
 
         <p class="scope-note"><strong>A suitable existing receptacle is required.</strong> New or relocated outlets are not included in the standard TV-mounting service and can only be considered as separate work.</p>
+      </div>
+    </section>
+
+    <section class="section project-proof" aria-labelledby="project-proof-heading">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Recent West Side installation</p>
+            <h2 id="project-proof-heading">Careful placement. Full-motion flexibility.</h2>
+          </div>
+          <p>
+            This full-motion installation was planned around the wall, nearby outlets and the way the room will be used. The finished television can sit neatly against the wall or extend and turn when a different viewing angle is needed.
+          </p>
+        </div>
+
+        <div class="project-gallery">
+          <img class="project-photo main" src="../tv-mounted-finished.webp" width="1400" height="1050" alt="Finished television mounted securely on a full-motion wall mount" loading="lazy" decoding="async" />
+          <img class="project-photo" src="../full-motion-tv-mount.webp" width="1100" height="825" alt="Mounted television extended and angled on its full-motion arm" loading="lazy" decoding="async" />
+          <img class="project-photo action" src="../tv-mount-layout.webp" width="600" height="800" alt="Christopher checking the wall and marking the TV mount position before drilling" loading="lazy" decoding="async" />
+        </div>
       </div>
     </section>
 
@@ -1056,7 +1096,7 @@
         <ul class="verify-list">
           <li>TV level and securely mounted</li>
           <li>Mount locking features engaged</li>
-          <li>Tilting movement tested</li>
+          <li>Mount movement and locking features tested</li>
           <li>TV powers on</li>
           <li>Picture and sound confirmed</li>
           <li>Connected equipment responds</li>
@@ -1112,7 +1152,7 @@
         <div class="faq-list">
           <details>
             <summary>What types of TV mounts do you install?</summary>
-            <p>The standard service focuses on select fixed and tilting mounts after compatibility review. Full-motion and other nonstandard mounts are not currently offered.</p>
+            <p>The standard service includes select fixed, tilting and full-motion mounts after compatibility review. Every installation is still screened for TV and mount compatibility, wall construction, mounting height and a safe lifting plan.</p>
           </details>
           <details>
             <summary>Does the homeowner provide the mount?</summary>
