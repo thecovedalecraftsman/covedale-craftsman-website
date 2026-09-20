@@ -620,6 +620,57 @@
       footer { padding-bottom: 100px; }
     }
 
+
+    /* Compact navigation at the existing desktop-nav breakpoint. */
+    .menu-toggle { display: none; }
+    .mobile-nav { display: none; }
+    @media (max-width: 1040px) {
+      .header-cta { display: none; }
+      .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        margin-left: auto;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        border: 1px solid var(--ink-soft);
+        border-radius: 8px;
+        background: transparent;
+        color: var(--ink);
+        cursor: pointer;
+      }
+      .menu-toggle:focus-visible,
+      .mobile-nav a:focus-visible {
+        outline: 3px solid var(--blue);
+        outline-offset: 3px;
+      }
+      .mobile-nav:not([hidden]) {
+        display: grid;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        padding: 12px max(14px, calc((100% - var(--max)) / 2));
+        max-height: calc(100dvh - 180px);
+        overflow-y: auto;
+        background: #ebf2fa;
+        border-bottom: 1px solid rgba(16, 36, 45, 0.15);
+        box-shadow: 0 8px 14px rgba(16, 36, 45, 0.1);
+      }
+      .mobile-nav a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 8px 12px;
+        color: var(--ink-soft);
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .mobile-nav a:hover { color: var(--blue); }
+    }
   </style>
 </head>
 <body>
@@ -635,7 +686,17 @@
         <a href="#faq">FAQs</a>
       </nav>
       <a class="header-cta" href="sms:+15136568205">Text Photos for a Quote</a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+      </button>
     </div>
+
+    <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" hidden>
+      <a href="#services">Smart Home Help</a>
+      <a href="#process">How It Works</a>
+      <a href="#ask-first">Ask First</a>
+      <a href="#faq">FAQs</a>
+    </nav>
   </header>
 
   <main id="top">
@@ -851,5 +912,46 @@
 
   <footer><div class="shell footer-inner"><span>© <span id="year"></span> The Covedale Craftsman. All rights reserved.</span><span><a href="../">Home</a> · Veteran-owned · Greater Cincinnati</span></div></footer>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    (() => {
+      const button = document.querySelector('.menu-toggle');
+      const menu = document.getElementById('mobile-navigation');
+      const mobile = window.matchMedia('(max-width: 1040px)');
+      const setOpen = (open) => {
+        menu.hidden = !open;
+        button.setAttribute('aria-expanded', String(open));
+        button.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      };
+      const close = () => {
+        if (menu.contains(document.activeElement)) button.focus();
+        setOpen(false);
+      };
+      button.addEventListener('click', () => {
+        setOpen(mobile.matches && menu.hidden);
+      });
+      menu.addEventListener('click', (event) => {
+        if (event.target.closest('a')) close();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !menu.hidden) {
+          close();
+          button.focus();
+        }
+      });
+      document.addEventListener('click', (event) => {
+        if (!menu.hidden && !menu.contains(event.target) && !button.contains(event.target)) close();
+      });
+      mobile.addEventListener('change', () => {
+        if (!mobile.matches) {
+          const links = [...menu.querySelectorAll('a')];
+          const index = links.indexOf(document.activeElement);
+          if (index >= 0 || document.activeElement === button) {
+            document.querySelectorAll('.desktop-nav a')[Math.max(0, index)].focus();
+          }
+          setOpen(false);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
