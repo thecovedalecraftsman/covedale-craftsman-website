@@ -6,8 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, follow" />
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
+      padding: 24px 16px;
+      line-height: 1.6;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #f0f0ff;
       color: #111827;
@@ -17,6 +20,7 @@
       min-height: 100vh;
     }
     .wrap {
+      width: 100%;
       max-width: 480px;
       background: #ffffff;
       border-radius: 18px;
@@ -27,16 +31,24 @@
     }
     h1 {
       font-size: 1.6rem;
-      margin-bottom: 8px;
+      line-height: 1.25;
+      margin: 0 0 12px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 24px 0 8px;
     }
     p {
       font-size: 0.95rem;
       color: #4b5563;
-      margin-bottom: 10px;
+      margin: 0 0 12px;
     }
     a.button {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      text-align: center;
       gap: 6px;
       margin-top: 12px;
       padding: 9px 16px;
@@ -48,21 +60,36 @@
       font-weight: 600;
       box-shadow: 0 12px 26px rgba(0, 96, 144, 0.5);
     }
+    .actions { display: flex; flex-direction: column; align-items: stretch; }
+    a.button-secondary {
+      background: transparent;
+      color: #006090;
+      box-shadow: none;
+      border: 1px solid #006090;
+    }
+    a.button:focus-visible {
+      outline: 3px solid #006090;
+      outline-offset: 3px;
+    }
     a.button:hover {
       filter: brightness(1.05);
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Thank you for your request!</h1>
+  <main class="wrap">
+    <h1>Thanks — I received your project request.</h1>
     <p>
-      I’ve received your message and will respond within one business day with a clear plan and straightforward pricing.
+      I'll review the details and respond within one business day with the next step. Submitting the form doesn't schedule an appointment or confirm that the project has been accepted.
     </p>
+    <h2>Have photos? Send them now.</h2>
     <p>
-      If something is urgent, you can always call or text me directly at <strong>513-656-8205</strong>.
+      Photos of the item or device and the proposed work area usually help me review the project faster. If you know the brand or model and didn't include it in the form, you can send that in the same text.
     </p>
-    <a href="/" class="button">Back to The Covedale Craftsman</a>
-  </div>
+    <div class="actions">
+      <a href="sms:+15136568205" class="button">Text Photos to Christopher</a>
+      <a href="/" class="button button-secondary">Back to The Covedale Craftsman</a>
+    </div>
+  </main>
 </body>
 </html>
